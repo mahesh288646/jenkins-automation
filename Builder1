@@ -3,9 +3,9 @@ import src.main.groovy.jenkins.automation.utils.EnvironmentUtils
 
 // the "JAC_ENVIRONMENT" global variable is set in all of our Jenkinses, to either "DEV", "STAGE", or "PROD"
 
-def env = EnvironmentUtils.getInstance("${JAC_ENVIRONMENT}")
+def env = "Dev"
 
-if (env.isDev()) {
+if ($env == "Dev") {
     new BaseJobBuilder(
             name: "a-sample-job",
      ).build(this)
