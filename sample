@@ -1,4 +1,4 @@
-import utilities.MyUtilities
+import utilities.*
 
 def myJob = job('example')
 
