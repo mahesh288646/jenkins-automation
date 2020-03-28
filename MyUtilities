@@ -4,4 +4,11 @@ class MyUtilities {
             description('Arbitrary feature')
         }
     }
+def env = "examplee"
+    static void addMyTest("examplee") {
+        println(env)
+    }
+
+
+
 }
