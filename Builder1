@@ -1,5 +1,4 @@
-this.class.classLoader.rootLoader.addURL( new URL("file:///y:/tmp/test/") )
-println Class.forName("impl.FooImpl").newInstance().foo()
+
 package src.main.groovy.jenkins.automation.builders
 new BaseJobBuilder(
         name: "operations-jira-restart",
