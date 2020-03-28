@@ -1,12 +1,15 @@
-import src.main.groovy.jenkins.automation.builders.*
-import src.main.groovy.jenkins.automation.utils.*
-
-// the "JAC_ENVIRONMENT" global variable is set in all of our Jenkinses, to either "DEV", "STAGE", or "PROD"
-
-String env = "Dev"
-println $env
-//if ($env == "Dev") {
-//    new BaseJobBuilder(
-//            name: "a-sample-job",
-//     ).build(this)
-//}
+this.class.classLoader.rootLoader.addURL( new URL("file:///y:/tmp/test/") )
+println Class.forName("impl.FooImpl").newInstance().foo()
+package src.main.groovy.jenkins.automation.builders
+new BaseJobBuilder(
+        name: "operations-jira-restart",
+        description: "Restarts dev jira. To be used when Jira is not responding",
+        emails: ["foo@example.com", "bar@example.com"]
+).build(this).with {
+    scm {
+        git("https://github.com/mahesh288646/jenkins-automation.git", "master")
+    }
+    steps {
+        shell("fab restart_jira")
+    }
+}
