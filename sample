@@ -1,6 +1,6 @@
 import utilities.*
 
 def myJob = job('example')
-
+println(myJob)
 MyUtilities.addMyFeature('example')
 MyUtilities.addMyFeature(myJob)
