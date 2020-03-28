@@ -2,4 +2,5 @@ import utilities.*
 
 def myJob = job('example')
 
-//MyUtilities.addMyFeature(myJob)
+MyUtilities.addMyFeature('example')
+MyUtilities.addMyFeature(myJob)
