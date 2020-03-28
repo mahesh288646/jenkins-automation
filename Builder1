@@ -1,5 +1,5 @@
 
-package src.main.groovy.jenkins.automation.builders
+package jenkins.automation.builders
 new BaseJobBuilder(
         name: "operations-jira-restart",
         description: "Restarts dev jira. To be used when Jira is not responding",
